@@ -66,3 +66,50 @@
     margin: auto;
     padding: 7px;
   }
+/* Animções do form*/
+  form {
+      overflow: hidden;
+  }
+  form  {/**/
+      animation-name: fade;/*chama a animação*/
+      animation-duration: 500ms;/*seta o tempo para a animação */
+  }
+
+  form .input-block:nth-child(1) {
+      animation-name: move;
+      animation-duration: 500ms;
+  }
+  form .input-block:nth-child(2) {
+    animation-name: move;
+    animation-duration: 500ms;
+    animation-delay: 150ms;
+    animation-fill-mode: backwards;/*faz com que o elemento fique na posição inicial do from*/
+  }
+
+  form .btn-login{
+    animation-name: move;
+    animation-duration: 400ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+  }
+  @keyframes fade {/* @keyframes = cria a animação ///////// fade é o nome que poderia ser qualquer outro*/
+      from{/*inicio fram significa 0*/
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to{/*fim to significa 100%*/
+        opacity: 1;
+        transform: scale(1);
+      }
+  }
+
+  @keyframes move {
+      from {
+        opacity: 0;
+        transform: translateX(-35%);
+      } 
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  }
